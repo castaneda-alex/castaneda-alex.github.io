@@ -99,7 +99,7 @@
         </tr>
         <tr style="height:200px">
           <td>Rapid-Acting</td>
-          <td><input name="drug-name-rapid" type="text" oninput="checkAnswer(name, this.value)"/></td>
+          <td><input name="drug-name-rapid" type="text" oninput="checkAnswer(this)"/></td>
           <td><input name="onset-rapid" type="text" oninput="checkAnswer(name, this.value)"/></td>
           <td><input name="peak-rapid" type="text" oninput="checkAnswer(name, this.value)"/></td>
           <td><input name="dur-rapid" type="text"oninput="checkAnswer(name, this.value)" /></td>
@@ -137,7 +137,7 @@
   </div>
 
   <script>
-    function checkAnswer(name, answer) {
+    function checkAnswer(answer) {
         answerDict = {
             "drug-name-rapid": "novolog, humalog, apidra",
             "onset-rapid": "10 min",
@@ -157,7 +157,7 @@
             "dur-long": "24 hrs",
         }
 
-        if (answer != answerDict[name]) {
+        if (answer.value != answerDict[answer.name]) {
             document.getElementById(name).style.borderColor = "red";
         }
         else {
