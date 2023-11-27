@@ -32,8 +32,8 @@
 
 <style>
 textarea {
-    width: 100%;
-    height: 150px;
+    width: 80%;
+    height: 300px;
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -97,8 +97,8 @@ textarea {
   <main id="main" data-aos="fade" data-aos-delay="1500">
 
     <p>Entry:</p>
-    <form>
-        <textarea name="journal-entry">Start here...</textarea>
+    <form class="center-screen">
+        <textarea id="journal-entry">Start here...</textarea>
     </form>
     <button onclick="saveEntry()">Submit</button>
 
@@ -107,7 +107,7 @@ textarea {
 
   <script>
     function saveEntry() {
-        var journalEntry = document.getElementById("journal-entry").value;
+        var journalEntry = document.getElementById("journal-entry");
         console.log(journalEntry);
     }
   </script>

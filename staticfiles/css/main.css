@@ -64,6 +64,14 @@ h6 {
   padding-bottom: 40px;
 }
 
+.center-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
 .section-header h2 {
   font-size: 14px;
   font-weight: 500;
