@@ -51,7 +51,7 @@ textarea {
   <div class="container-fluid d-flex align-items-center justify-content-center">
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a href="/journal.html" class="active">Home</a></li>
+        <li><a href="/" class="active">Home</a></li>
         <li class="dropdown"><a href="#"><span>Pictures</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
           <ul>
             <li class="dropdown"><a href="#"><span>International</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -98,12 +98,19 @@ textarea {
 
     <p>Entry:</p>
     <form>
-        <textarea name="journal-entry"/>
+        <textarea name="journal-entry">Start here...</textarea>
     </form>
-    <button>Submit</button>
+    <button onclick="saveEntry()">Submit</button>
 
 
   </main><!-- End #main -->
+
+  <script>
+    function saveEntry() {
+        var journalEntry = document.getElementById("journal-entry").value;
+        console.log(journalEntry);
+    }
+  </script>
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
